@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#07111f">
+  <title>SKY WARRIOR — Teacher's Day 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell">
+    <section id="menu" class="screen active" aria-label="Main menu">
+      <canvas id="menu-canvas" aria-hidden="true"></canvas>
+      <div class="menu-vignette"></div>
+      <div class="menu-content">
+        <p class="eyebrow">SPECIAL MISSION</p>
+        <h1>SKY <span>WARRIOR</span></h1>
+        <p class="subtitle">TEACHER'S DAY 2026</p>
+        <button id="start-button" class="primary-button" type="button">
+          <span>MULAI</span>
+          <i></i>
+        </button>
+      </div>
+      <button id="menu-audio" class="audio-button" type="button" aria-label="Toggle audio">AUDIO ON</button>
+    </section>
+
+    <section id="game" class="screen" aria-label="Gameplay">
+      <canvas id="game-canvas"></canvas>
+      <div id="hud">
+        <div class="hud-left">
+          <span class="hud-label">HP</span>
+          <div class="hp-track"><div id="player-hp"></div></div>
+        </div>
+        <div class="phase-wrap">
+          <span id="phase-label">FASE 1</span>
+          <strong id="score">000000</strong>
+        </div>
+      </div>
+      <div id="boss-hud">
+        <div class="boss-title"><span>FINAL BOSS</span><strong>NIGHTFALL</strong></div>
+        <div class="boss-track"><div id="boss-hp"></div></div>
+      </div>
+      <div id="warning"><strong>WARNING!</strong><span>BOSS INCOMING!</span></div>
+      <div id="phase-banner"><span>FASE 1</span><strong>AWAL PERTEMPURAN</strong></div>
+      <button id="game-audio" class="audio-button game-audio" type="button" aria-label="Toggle audio">AUDIO ON</button>
+    </section>
+
+    <section id="victory" class="screen ending" aria-label="Victory">
+      <canvas id="victory-canvas" aria-hidden="true"></canvas>
+      <div class="ending-glow"></div>
+      <div class="victory-content">
+        <p>SELAMAT HARI GURU</p>
+        <h2>BU ANDIN</h2>
+        <button id="continue-button" class="gold-button" type="button">LANJUT</button>
+      </div>
+    </section>
+
+    <section id="poem" class="screen poem-screen" aria-label="Poem">
+      <canvas id="poem-canvas" aria-hidden="true"></canvas>
+      <div class="poem-scroll">
+        <header class="poem-header">
+          <p>UNTUK GURU TERBAIK</p>
+          <span>Sebuah persembahan kecil untuk Bu Andin.</span>
+        </header>
+        <article>
+          <h2>PELITA DALAM PERJALANAN</h2>
+          <div class="verse">Di balik setiap ilmu yang kami pelajari,<br>Ada kesabaran yang tak pernah berhenti.<br>Engkau tuntun kami mengenal dunia,<br>Dengan ketulusan dan penuh cinta.</div>
+          <div class="verse">Setiap nasihat menjadi cahaya,<br>Setiap pelajaran menjadi bekal berharga.<br>Meski terkadang kami sulit memahami,<br>Engkau tetap sabar membimbing kami.</div>
+          <div class="verse">Waktu mungkin akan terus berjalan,<br>Namun jasamu tak akan terlupakan.<br>Terima kasih atas segala pengorbanan,<br>Atas ilmu, doa, dan segala ketulusan.</div>
+          <div class="verse final-verse">Untuk Bu Andin yang kami hormati,<br>Terima kasih telah menjadi pelita hati.<br>Semoga bahagia selalu menyertai,<br>Dan kebaikanmu menjadi kenangan abadi.</div>
+          <p class="closing">SELAMAT HARI GURU, BU ANDIN.</p>
+        </article>
+        <button id="finish-button" class="gold-button" type="button">SELESAI</button>
+      </div>
+    </section>
+
+    <section id="final" class="screen ending final-ending" aria-label="Final ending">
+      <canvas id="final-canvas" aria-hidden="true"></canvas>
+      <div class="final-rays"></div>
+      <div class="final-content">
+        <p>HARI GURU 2026</p>
+        <h2>Terima kasih, Bu Andin.</h2>
+        <span>Jasamu akan selalu kami kenang.</span>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
